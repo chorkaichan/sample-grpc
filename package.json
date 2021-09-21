@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "dev": "yarn run dev:server & yarn run dev:front",
+    "dev:server": "nodemon src/server/index.ts",
+    "dev:front": "next dev",
+    "make": "make protogen",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.3.7",
+    "google-protobuf": "^3.18.0",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -25,17 +30,22 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-tsc": "^2.0.0",
+    "grpc-tools": "^1.11.2",
+    "grpc_tools_node_protoc_ts": "^5.3.2",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.1",
+    "nodemon": "^2.0.12",
     "postcss": "^8.3.6",
+    "sass": "^1.42.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.20.1",
     "tailwindcss": "^2.2.7",
+    "ts-node": "^10.2.1",
     "tsc": "^2.0.3",
-    "typescript": "4.3.5"
+    "typescript": "^4.4.3"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
