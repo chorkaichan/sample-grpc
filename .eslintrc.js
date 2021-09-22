@@ -61,6 +61,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': [ 1, 'tag-aligned' ],
     'jsx-a11y/anchor-is-valid': [ 'off' ],
     'no-unused-vars': [ 'warn', { 'argsIgnorePattern': '^_' }],
+    '@typescript-eslint/no-unused-vars': [ 'warn', { 'argsIgnorePattern': '^_' }],
     'react/jsx-props-no-spreading': [ 'off' ],
     'react/jsx-curly-newline': [ 'warn', { multiline: 'require', singleline: 'consistent' }],
     'react/jsx-one-expression-per-line': 'off',
